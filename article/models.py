@@ -22,8 +22,8 @@ class ArticleType(models.Model):
 
     # 定义显示的名字
     class Meta:
-        verbose_name = '文章分类'
-        verbose_name_plural = '文章分类'
+        verbose_name = '文档分类'
+        verbose_name_plural = '文档分类'
 
 
 # 文档模型
@@ -39,5 +39,5 @@ class Article(models.Model):
 
     # 定义显示名称
     class Meta:
-        verbose_name = '新闻'
-        verbose_name_plural = '新闻'
+        verbose_name = '文档管理'
+        verbose_name_plural = '文档管理'
