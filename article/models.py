@@ -3,6 +3,9 @@ from django.db import models
 
 # Create your models here.
 
+'''
+1. 主键不用自己定义，Django会自动加上
+'''
 
 # 文档类型模型
 class ArticleType(models.Model):
