@@ -2,7 +2,6 @@ from django.contrib import admin
 
 from article.models import Article, ArticleType
 
-
 # Register your models here.
 
 # 模型的管理端定义

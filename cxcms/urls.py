@@ -18,8 +18,11 @@ from django.contrib import admin
 
 from article.views import article_list
 
+# include需要包含的
+from django.conf.urls import include
 
 urlpatterns = [
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^article/', article_list),
     url(r'^admin/', admin.site.urls),
 ]

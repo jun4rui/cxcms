@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'ckeditor',
     'article',
 ]
 
@@ -121,3 +123,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+# Ckeditor需要用到的设置
+# TODO：静态文件的问题尚未解决;可以考虑运营服务器的方式继续研究
+STATIC_ROOT = '/static/'
+CKEDITOR_JQUERY_URL = 'http://code.jquery.com/jquery-2.2.0.min.js'
+CKEDITOR_UPLOAD_PATH = 'uploads/'

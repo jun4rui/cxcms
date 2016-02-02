@@ -1,6 +1,7 @@
 from django.db import models
 
-
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
 '''
@@ -31,7 +32,10 @@ class Article(models.Model):
     # 字符字段
     title = models.CharField(max_length=50, blank=True, verbose_name='标题')
     # 文本字段
-    detail = models.TextField(blank=True, verbose_name='内容')
+    # detail = models.TextField(blank=True, verbose_name='内容')
+    # 只要使用RichTextField就能自动在后台呈现可视化编辑器，叼炸天！
+    # detail = RichTextField(verbose_name='内容')
+    detail = RichTextUploadingField(verbose_name='内容')
     # Datetime字段，默认是当前时间
     postTime = models.DateTimeField(verbose_name='发布时间')
     # 这里是外键
